@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/communication.js"></script>
+    <title>Login Success | Communications Application</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-nav">
+        <ul>
+          <li><a class="nav-link" href="groupchat.html">Group Chat</a></li>
+          <li><a class="nav-link" href="manage_users.html">Manage Users</a></li>
+          <li>
+            <a class="nav-link" href="manage_documents.html"
+              >Manage Documents</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#" onclick="userLogout()">logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="text-center">
+      <h1>Login Successful</h1>
+      <p><span class="bold">Welcome!</span> <span id="useremail"></span></p>
+    </div>
+    <script>
+      addText("useremail", loggedinUser[0].email);
+    </script>
+  </body>
+</html>

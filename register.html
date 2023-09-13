@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/communication.js"></script>
+    <title>Register | Communications Application</title>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>Register</h1>
+      <div class="register-block">
+        <p>
+          <span class="label">Full Name</span
+          ><input
+            type="text"
+            id="username"
+            name="name"
+            placeholder="Full Name"
+          />
+        </p>
+        <p>
+          <span class="label">Email</span>
+          <input
+            type="text"
+            id="useremail"
+            name="email"
+            placeholder="info@email.com"
+          />
+        </p>
+        <p>
+          <span class="label">Password</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </p>
+        <p>
+          <span class="label">Confirm Password</span>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm Password"
+          />
+        </p>
+        <div id="error" class="error" style="display: none"></div>
+        <button
+          class="btn btn-outline-dark"
+          type="submit"
+          onclick="userRegister()"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

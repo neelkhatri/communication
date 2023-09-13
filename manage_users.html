@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/communication.js"></script>
+    <title>Manage Users | Communications Application</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a class="nav-link" href="groupchat.html">Group Chat</a></li>
+        <li>
+          <a class="nav-link active" href="manage_users.html">Manage Users</a>
+        </li>
+        <li>
+          <a class="nav-link" href="manage_documents.html">Manage Documents</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#" onclick="userLogout()">logout</a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-left">
+      <h1>Users</h1>
+    </div>
+    <div>
+      <table id="table" class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">User Email ID</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="modal" id="deleteUserModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm User Deletion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              X
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure?</p>
+          </div>
+          <div class="modal-footer" id="modal-action"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      for (var i = 0; i < users.length; i++) {
+        disabled = "";
+        if (loggedinUser[0].email == users[i].email) {
+          disabled = "style=pointer-events:none;";
+        }
+        document.getElementById(
+          "table"
+        ).innerHTML += `<tr><td>${users[i].name}</td><td>${users[i].email}</td><td>
+              <a href="edit_user.html?user=${i}">Edit</a> |
+              <a id="submit" href="#" data-bs-toggle="modal" data-bs-target="#deleteUserModal" onclick="modalSubmit(${i})" ${disabled}>Delete</a>
+            </td></tr>`;
+      }
+      function modalSubmit(uid) {
+        document.getElementById(
+          "modal-action"
+        ).innerHTML = `<button id="confirmSubmit" type="button" class="btn btn-primary" onclick="deleteUser(${uid})">
+              Ok
+            </button><button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>`;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

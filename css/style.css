@@ -1,0 +1,97 @@
+body {
+    margin: 30px 2rem;
+}
+.bold {
+    font-weight: bold;
+}
+.error {
+    color: red;
+    font-weight: 500;
+}
+.navbar ul {
+    list-style: none;
+    float: left;
+    padding: 0;
+    border: 1px solid;
+    width: 100%;
+    background-color: darkgray;
+}
+.login, .register, .login-block, .register-block {
+    margin: 20px 0;
+    font-weight: bold;
+    padding: 20px;
+}
+.login-block, .register-block {
+    max-width: 420px;
+    margin: 0 auto;
+}
+.login-block {
+    max-width: 320px;;
+}
+button {
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+.modal-header button {
+    padding: 0 5px;
+    margin: 0;
+}
+.login-block .label {
+    min-width: 75px;
+}
+.label {
+    margin-right: 10px;
+    float: left;
+    min-width: 140px;
+    text-align: left;
+}
+.login-block p {
+    margin-bottom: 2rem;
+}
+.login-block button {
+    text-align: center;
+}
+.navbar-nav {
+    width: 100%;
+    display: inline;
+    text-align: center;
+}
+.navbar ul li {
+    display: inline-block;
+    width: 24.8%;
+    border-right: 1px solid;
+}
+.navbar ul li:last-child {
+    border-right: none;
+}
+.navbar ul li a {
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+} 
+.chat-box {
+    border: 1px solid;
+    border-radius: 5px;
+    min-height: 200px;
+    width: 50%;
+    margin: 0 auto;
+}
+.chat-title {
+    border: 1px solid;
+    border-radius: 5px;
+}
+.message-window {
+    min-height: 200px;
+}
+.input-window {
+    border: 1px solid;
+    padding: 5px;
+}
+.input-window button {
+    margin: 0;
+}
+.input-window input {
+    min-width: 60%;
+    padding: 5px;
+    border-radius: 5px;
+}

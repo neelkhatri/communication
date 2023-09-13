@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/communication.js"></script>
+
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1 class="text-center">Welcome to users module</h1>
+      <div class="login">
+        <p>Existing users</p>
+        <button
+          class="btn btn-outline-dark"
+          type="submit"
+          onclick="location.href='login.html'"
+        >
+          Login
+        </button>
+      </div>
+      <div class="register">
+        <p>New Users</p>
+        <button
+          class="btn btn-outline-dark"
+          type="submit"
+          onclick="location.href='register.html'"
+        >
+          Register
+        </button>
+      </div>
+      <div id="logged-out" style="display: none">
+        <p><span class="bold">You have been logged out</span></p>
+      </div>
+    </div>
+    <script>
+      if (searchParams.get("user") == "logout") {
+        document.getElementById("logged-out").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
