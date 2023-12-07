@@ -18,3 +18,4 @@ jobs:
         with:
           root: ./
           blacklist: invalid
+          css: true
